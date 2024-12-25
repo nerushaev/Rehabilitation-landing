@@ -14,6 +14,10 @@ ol, ul {
   list-style: none;
 }
 
+body {
+    box-sizing: border-box;
+}
+
 main {
     font-family: "Onest";
 }
@@ -45,6 +49,35 @@ img {
     display: block;
     height: auto;
     width: 100%;
+}
+
+.mobile-line-break {
+    display: inline;
+    @media screen and (min-width: 1440px) {
+        display: none;
+    }
+}
+
+.desktop-line-break {
+    display: none;
+    @media screen and (min-width: 1440px) {
+    display: inline; 
+    }
+}
+
+.desktop-hidden {
+    display: block;
+    @media screen and (min-width: 1440px) {
+    display: none;
+    }
+}
+
+.desktop-vissible {
+    display: none;
+    @media screen and (min-width: 1440px) {
+    display: block;
+    padding-left: 4vw;
+    }
 }
 
 .hero {
@@ -126,7 +159,11 @@ img {
 }
 
 .halfcircle {
-    /* margin-left: auto; */
+    @media screen and (min-width: 1440px) {
+        width: 279px;
+        height: 274px;
+        margin-left: auto;
+    }
 }
 
 .regular-text {
@@ -151,12 +188,20 @@ img {
         font-size: var(--accent-text);
     
     }
-
+    @media screen and (min-width: 1440px) {
+        font-size: var(--tablet-text);
+    
+    }
 }
 
 .regular-text-wrapper {
     margin: 0 7vw;
     margin-bottom: 5vh;
+    @media screen and (min-width: 1440px) {
+    margin: 0 17vw;
+    margin-bottom: 5vh;
+           
+    }
 }
 
 .background-yellow-text {
@@ -166,6 +211,31 @@ img {
     padding: 5vh 7vw;
     padding-right: 7vw;
     margin-bottom: 5vh;
+
+    @media screen and (min-width: 1440px) {
+        position: relative;
+        background-color: var(--light-blue);
+        padding-right: 18vw;
+        padding-left: 8vw;
+        margin-left: 9vw;
+        border-radius: 250px 0 0 250px;
+
+    }
+}
+
+.blue-semicircle {
+    display: none;
+    visibility: hidden;
+    @media screen and (min-width: 1440px) {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        width: auto;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+    }
+
 }
 
 .background-light-blue-text {
@@ -175,6 +245,18 @@ img {
     padding: 5vh 7vw;
     padding-right: 7vw;
     margin-bottom: 5vh;
+    @media screen and (min-width: 1440px) {
+    border-radius: 180px;
+    margin: 0 5vw;
+    padding: 5vh 8vw;
+    margin-bottom: 7vh;
+    }
+}
+
+.background-light-blue-text span {
+    @media screen and (min-width: 1440px) {
+        font-size: 45px;
+    }
 }
 
 .subtitle {
@@ -188,8 +270,9 @@ img {
     font-size: var(--subtitle);
     }
     @media screen and (min-width: 1440px) {
-    font-size: var(--title);
-    padding-left: 1vw;
+        font-size: var(--title);
+        text-align: left;
+        padding: 0 6vw;
     }
 }
 
@@ -207,10 +290,18 @@ img {
         margin-bottom: 5vh;
         gap: 2vw;
     }
+    @media screen and (min-width: 1440px) {
+        gap: 6 vw;
+    }
 }
 
 .halfwidth {
     width: 50%;
+    margin-left: 7vw;
+    @media screen and (min-width: 1440px) {
+    width: 23%;
+    margin-left: 17vw;
+    }
 }
 
 .mobile-style img{
@@ -219,8 +310,8 @@ img {
         margin-left: auto;
     }
     @media screen and (min-width: 1440px) {
-        border-top-left-radius: 100px;
-        border-bottom-left-radius: 100px;
+        border-top-left-radius: 250px;
+        border-bottom-left-radius: 250px;
     }
 }
 
@@ -231,8 +322,31 @@ img {
     padding: 5vh 7vw;
     padding-right: 7vw;
     margin-bottom: 5vh;
+    @media screen and (min-width: 1440px) {
+        height: 248px;
+        padding-left: 17vw;
+        padding-right: 9vw;
+    }
 }
 
+.desktop-flex-wrapper {
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        height: 248px;
+        margin-bottom: 5vh;
+
+        }
+}
+
+.light-blue-semicircle {
+    display: none;
+    @media screen and (min-width: 1440px) {
+        display: block;
+        max-height: 248px;
+        width: auto;
+    }
+
+}
 .white {
     color: var(--white);
 }
@@ -243,6 +357,11 @@ img {
     max-height: 100%;
     background-color: var(--light-blue);
     margin-bottom: 5vh;
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        align-items: center;
+        padding-right: 9vw;
+    }
 }
 
 .label {
@@ -254,7 +373,12 @@ img {
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     margin-bottom: 5vh;
+    @media screen and (min-width: 1440px) {
+        position: absolute;
+    }
 }
+
+
 
 .light-yellow {
     background-color: var(--light-yellow);
@@ -305,6 +429,10 @@ footer {
     gap: 1vw;
     justify-content: center;
 
+    }
+
+    @media screen and (min-width: 1440px) {
+        gap: 2vw;
     }
 
 }
