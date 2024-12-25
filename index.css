@@ -43,8 +43,8 @@ main {
 
 img {
     display: block;
-    height: 100%;
-    max-width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .hero {
@@ -126,7 +126,7 @@ img {
 }
 
 .halfcircle {
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 
 .regular-text {
@@ -205,7 +205,12 @@ img {
         display: flex;
         align-items: center;
         margin-bottom: 5vh;
+        gap: 2vw;
     }
+}
+
+.halfwidth {
+    width: 50%;
 }
 
 .mobile-style img{
